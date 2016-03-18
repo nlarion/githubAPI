@@ -1,5 +1,6 @@
-var module = require('./../js/module.js');
+var github = require('./../js/github.js');
+
 $(document).ready(function(){
   console.log('yo! I am working!');
-  module.hello();
+  github.getRepos();
 });
