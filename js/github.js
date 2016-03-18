@@ -4,6 +4,7 @@ exports.getRepos = function(user){
     console.log(response);
     $('#userResults').prepend('<div><img src="'+response.avatar_url+'"/></div><br>');
     $('#userResults').append('<div>User Name: '+response.name+'</div><br>');
+    $('#userResults').append('<div>User GitHub profile: <a href="'+response.html_url+'" target="_blank">'+response.html_url+'</a></div><br>');
     $.get('https://api.github.com/users/'+user+'/repos?access_token=' + apiKey).then(function(response){
       console.log(response);
       for (var i = 0; i < response.length; i++) {
