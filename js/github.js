@@ -5,11 +5,10 @@ exports.getRepos = function(user){
     $('#userResults').append('<div>User Name: '+response.name+'</div><br>');
     $('#userResults').append('<div>User GitHub profile: <a href="'+response.html_url+'" target="_blank">'+response.html_url+'</a></div><br>');
     $.get('https://api.github.com/users/'+user+'/repos?direction=desc&access_token=' + apiKey).then(function(response){
-      console.log(response);
       for (var i = 0; i < response.length; i++) {
-        var htmlToAdd = '<div>Repo: '+response[i].name;
+        var htmlToAdd = '<div class="repos"><span id="repo">Repo:</span> '+response[i].name;
         if(response[i].description.length != 0){
-          htmlToAdd += ' Description: '+response[i].description;
+          htmlToAdd += ' <span id="description">Description:</span> '+response[i].description;
           console.log(response[i].description);
         }
         htmlToAdd+='</div>';

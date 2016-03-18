@@ -1,7 +1,31 @@
 $background : #d3d3d3;
+body {
+  font-family: monospace;
+}
 
-.container {
+.containerTop {
   background: $background;
   border: 3px solid black;
   padding: 40px 80px;
+}
+
+.row {
+  padding: 10px;
+}
+
+#repo {
+  color: #34495E;
+  font-weight: bold;
+  background-color: #D2D7D3;
+}
+
+#description {
+  color: #34495E;
+  font-weight: bold;
+  background-color: #D2D7D3;
+}
+
+.repos{
+  margin: 5px;
+  background-color: #FDE3A7;
 }
