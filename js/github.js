@@ -9,8 +9,8 @@ exports.getRepos = function(user){
         var htmlToAdd = '<div class="repos"><span id="repo">Repo:</span> '+response[i].name;
         if(response[i].description.length != 0){
           htmlToAdd += ' <span id="description">Description:</span> '+response[i].description;
-          console.log(response[i].description);
         }
+        htmlToAdd+=' <span id="created">Created: '+moment(response[i].created_at).format("YYYY-MM-DD")+'</span>';
         htmlToAdd+='</div>';
         $('#repoResults').prepend(htmlToAdd);
       }
