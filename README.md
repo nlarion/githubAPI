@@ -1,7 +1,7 @@
 #GitHubAPI
 
 ####This is a website for displaying a GitHub's user account information and a list of recent repositories
-t####By: Neil Larion
+####By: Neil Larion
 
 ## Description
 
